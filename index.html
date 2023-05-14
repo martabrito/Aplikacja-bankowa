@@ -1,0 +1,56 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Aplikacja bankowa</title>
+</head>
+<body>
+    <div id="register-form">
+        <form onsubmit="return validateForm()">
+            <h1 class="form_title">Rejestracja</h1>
+
+            <label for="userName">Imię:</label>
+            <input type="text" name="userName" id="userName"><br><br>
+
+            <label for="userLastName">Nazwisko:</label>
+            <input type="text" name="userLastName" id="userLastName"><br><br>
+            
+            <label for="email">Adres email:</label>
+            <input type="email" name="email" id="email"><br><br>
+
+            <label for="phone">Numer telefonu:</label>
+            <input type="tel" name="phone" id="phone"><br><br>
+
+            <label for="email">Adres email:</label>
+            <input type="email" name="email" id="email"><br><br>
+
+            <label for="passwd">Hasło:</label>
+            <input type="password" name="passwd" id="passwd"><br><br>
+
+            <label for="passwdConf">Powtórz hasło:</label>
+            <input type="password" name="passwdConf" id="passwdConf"><br><br>
+
+            <input type="submit" value="Załóż konto">
+
+            <p>Masz już konto? <a href="#" onclick="toLogin()">Zaloguj się!</a></p>
+        </form>
+    </div>
+    <div id="login-form" style="display: none;">
+        <form>
+            <h1 class="form_title">Logowanie</h1>
+            <label for="username">Adres email:</label>
+            <input type="text" id="username" name="username"><br><br>
+            
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password"><br><br>
+            
+            <input type="submit" value="Zaloguj" form="myForm">
+            
+            <p>Nie masz konta? <a href="#" onclick="toRegister()">Zarejestruj się!</a></p>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
